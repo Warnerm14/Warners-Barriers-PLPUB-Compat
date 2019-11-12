@@ -25,7 +25,7 @@ _check1 = getNumber (configFile >> "cfgMagazines" >> "warn_baseItem" >> "warner_
 _check2 = getNumber (configFile >> "CfgPatches" >> "plp_urban_barriers" >> "requiredVersion");
 
 if (_check1 == 0 || _check2 == 0) exitWith {
-	hint "An error occured while loading the 'Warner's Barriers - PLP Compat' mod, please check your .rpt and search for 'Warner's Barriers'";
+	hint "An error occurred while loading the 'Warner's Barriers - PLP Compat' mod, please check your .rpt and search for 'Warner's Barriers'";
 	diag_log "=============== Warner's Barriers ===============";
 
 	if (_check1 == 0) then {
