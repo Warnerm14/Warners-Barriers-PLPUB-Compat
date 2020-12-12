@@ -19,26 +19,28 @@
 		
 	File Desc: Checks to ensure you are running the required base mods.
 */
-waitUntil {!(IsNull (findDisplay 46))};
+[] spawn {
+	waitUntil {!(IsNull (findDisplay 46))};
 
-_check1 = getNumber (configFile >> "cfgMagazines" >> "warn_baseItem" >> "warner_placeable");
-_check2 = getNumber (configFile >> "CfgPatches" >> "plp_urban_barriers" >> "requiredVersion");
+	_check1 = getNumber (configFile >> "cfgMagazines" >> "warn_baseItem" >> "warner_placeable");
+	_check2 = getNumber (configFile >> "CfgPatches" >> "plp_urban_barriers" >> "requiredVersion");
 
-if (_check1 == 0 || _check2 == 0) exitWith {
-	hint "An error occurred while loading the 'Warner's Barriers - PLP Compat' mod, please check your .rpt and search for 'Warner's Barriers'";
-	diag_log "=============== Warner's Barriers ===============";
+	if (_check1 == 0 || _check2 == 0) exitWith {
+		hint "An error occurred while loading the 'Warner's Barriers - PLP Compat' mod, please check your .rpt and search for 'Warner's Barriers'";
+		diag_log "=============== Warner's Barriers ===============";
 
-	if (_check1 == 0) then {
-		diag_log " You are not running the base Warner's Barriers!";
-		diag_log "                Download it here!                ";
-		diag_log "      https://tinyurl.com/warnersbarriersteam    ";
+		if (_check1 == 0) then {
+			diag_log " You are not running the base Warner's Barriers!";
+			diag_log "                Download it here!                ";
+			diag_log "      https://tinyurl.com/warnersbarriersteam    ";
+		};
+
+		if (_check2 == 0) then {
+			diag_log "       You are not running PLP Urban Packs!      ";
+			diag_log "                Download it here!                ";
+			diag_log "     https://tinyurl.com/plpurbanbarriersteam    ";
+		};
+
+		diag_log "=================================================";
 	};
-
-	if (_check2 == 0) then {
-		diag_log "       You are not running PLP Urban Packs!      ";
-		diag_log "                Download it here!                ";
-		diag_log "     https://tinyurl.com/plpurbanbarriersteam    ";
-	};
-
-	diag_log "=================================================";
 };
