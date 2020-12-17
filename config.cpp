@@ -161,7 +161,7 @@ class cfgMagazines
 		mass = 1.5;
 		scope = 2;
 		
-		displayName = "Traffic Barrel w/ Light";
+		displayName = "Traffic Barrel (Lights)";
 		warner_class = "plp_upm_PlasticTubeOrangeLightOn";	
 		warner_pos = "[0, 2, 0.9]";
 	};
@@ -305,6 +305,156 @@ class cfgMagazines
 		warner_class = "plp_upm_WoodBarrierShortYellow";	
 		warner_pos = "[0, 2, 0.6]";
 	};
+	
+	class warn_woodBarrierShortPoliceLight: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Road Barrier (Police/Short/Lights)";
+		warner_class = "plp_upm_WoodBarrierShortPoliceLightsOn";	
+		warner_pos = "[0, 2, 0.8]";
+	};
+	
+	class warn_woodBarrierShortRedLight: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Road Barrier (Striped/Short/Lights)";
+		warner_class = "plp_upm_WoodBarrierShortRedLightsOn";	
+		warner_pos = "[0, 2, 0.8]";
+	};
+	
+	class warn_woodBarrierShortYellowLight: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Road Barrier (Yellow/Short/Lights)";
+		warner_class = "plp_upm_WoodBarrierShortYellowLightsOn";	
+		warner_pos = "[0, 2, 0.8]";
+	};
+	
+	class warn_metalRoadBarrier: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Metal Road Barrier";
+		warner_class = "plp_upm_RoadBarrierOrange";	
+		warner_pos = "[0, 2, 0.7]";
+	};
+	
+	class warn_metalRoadBarrierLight: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Metal Road Barrier (Lights)";
+		warner_class = "plp_upm_RoadBarrierOrangeLight_on";	
+		warner_pos = "[0, 2, 0.8]";
+	};
+	
+	class warn_parkingBlockCone: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Parking Block Cone";
+		warner_class = "plp_upm_ParkingBlockCone";	
+		warner_pos = "[0, 2, 0.6]";
+	};
+	
+	class warn_modernMobileBarrierRed: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Modern Mobile Barrier (Red)";
+		warner_class = "plp_upm_MobileBarrierSmallRed";	
+		warner_pos = "[0, 2, 0.5]";
+	};
+	
+	class warn_modernMobileBarrierBlack: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Modern Mobile Barrier (Black)";
+		warner_class = "plp_upm_MobileBarrierSmallBlk";	
+		warner_pos = "[0, 2, 0.5]";
+	};
+	
+	class warn_modernMobileBarrierWhite: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Modern Mobile Barrier (White)";
+		warner_class = "plp_upm_MobileBarrierSmallWht";	
+		warner_pos = "[0, 2, 0.5]";
+	};
+	
+	class warn_mobileBarrierShortRed: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Mobile Barrier (Red/Short)";
+		warner_class = "plp_upm_MobileBarrierShortRed";	
+		warner_pos = "[0, 2, 0.5]";
+	};
+	
+	class warn_mobileBarrierShortBlack: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Mobile Barrier (Black/Short)";
+		warner_class = "plp_upm_MobileBarrierShortBlk";	
+		warner_pos = "[0, 2, 0.5]";
+	};
+	
+	class warn_mobileBarrierShortWhite: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Mobile Barrier (White/Short)";
+		warner_class = "plp_upm_MobileBarrierShortWht";	
+		warner_pos = "[0, 2, 0.5]";
+	};
+	
+	class warn_mobileBarrierLongRed: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Mobile Barrier (Red/Long)";
+		warner_class = "plp_upm_MobileBarrierLongRed";	
+		warner_pos = "[0, 2, 0.1]";
+	};
+	
+	class warn_mobileBarrierLongBlack: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Mobile Barrier (Black/Long)";
+		warner_class = "plp_upm_MobileBarrierLongBlk";	
+		warner_pos = "[0, 2, 0.1]";
+	};
+	
+	class warn_mobileBarrierLongWhite: warn_baseItem_plp
+	{
+		mass = 3;
+		scope = 2;
+		
+		displayName = "Mobile Barrier (White/Long)";
+		warner_class = "plp_upm_MobileBarrierLongWht";	
+		warner_pos = "[0, 2, 0.1]";
+	};
 };
 
 
@@ -430,6 +580,81 @@ class CfgVehicles
 			class _xx_warn_woodBarrierShortYellow
 			{
 				magazine="warn_woodBarrierShortYellow";
+				count=50;
+			};
+			class _xx_warn_woodBarrierShortPoliceLight
+			{
+				magazine="warn_woodBarrierShortPoliceLight";
+				count=50;
+			};
+			class _xx_warn_woodBarrierShortRedLight
+			{
+				magazine="warn_woodBarrierShortRedLight";
+				count=50;
+			};
+			class _xx_warn_woodBarrierShortYellowLight
+			{
+				magazine="warn_woodBarrierShortYellowLight";
+				count=50;
+			};
+			class _xx_warn_metalRoadBarrier
+			{
+				magazine="warn_metalRoadBarrier";
+				count=50;
+			};
+			class _xx_warn_metalRoadBarrierLight
+			{
+				magazine="warn_metalRoadBarrierLight";
+				count=50;
+			};
+			class _xx_warn_parkingBlockCone
+			{
+				magazine="warn_parkingBlockCone";
+				count=50;
+			};
+			class _xx_warn_modernMobileBarrierRed
+			{
+				magazine="warn_modernMobileBarrierRed";
+				count=50;
+			};
+			class _xx_warn_modernMobileBarrierBlack
+			{
+				magazine="warn_modernMobileBarrierBlack";
+				count=50;
+			};
+			class _xx_warn_modernMobileBarrierWhite
+			{
+				magazine="warn_modernMobileBarrierWhite";
+				count=50;
+			};
+			class _xx_warn_mobileBarrierShortRed
+			{
+				magazine="warn_mobileBarrierShortRed";
+				count=50;
+			};
+			class _xx_warn_mobileBarrierShortBlack
+			{
+				magazine="warn_mobileBarrierShortBlack";
+				count=50;
+			};
+			class _xx_warn_mobileBarrierShortWhite
+			{
+				magazine="warn_mobileBarrierShortWhite";
+				count=50;
+			};
+			class _xx_warn_mobileBarrierLongRed
+			{
+				magazine="warn_mobileBarrierLongRed";
+				count=50;
+			};
+			class _xx_warn_mobileBarrierLongBlack
+			{
+				magazine="warn_mobileBarrierLongBlack";
+				count=50;
+			};
+			class _xx_warn_mobileBarrierLongWhite
+			{
+				magazine="warn_mobileBarrierLongWhite";
 				count=50;
 			};
 		};

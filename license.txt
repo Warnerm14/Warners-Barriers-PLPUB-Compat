@@ -20,3 +20,5 @@ You may redistribute the Warners-Barriers-PLPUB-Compat.pbo as long as you give p
 You may not remove any code from the Warners-Barriers-PLPUB-Compat.pbo to use in your own mods/mission/projects without permission from the Author.
 You may repack the Warners-Barriers-PLPUB-Compat.pbo with edits made to the code as long as you do not modify the comment blocks. (Except the "With edits by:" part).
 		
+		
+	
