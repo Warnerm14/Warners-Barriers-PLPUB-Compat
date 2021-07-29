@@ -1,28 +1,25 @@
 /*
 	Warner's Barriers for Arma 3
-	PLP Urban Packs: Barriers and Fences Compatibility 
+	Fortifications Edition
 	
 	Author: Matthew Warner (Warnerm14)
+	Discord: Warnerm14#3936
 	Site: www.twitter.com/Warnerm14
-	
-	"PLP Urban Packs: Barriers and Fences" 
-	Created by poolpunk
-	https://steamcommunity.com/sharedfiles/filedetails/?id=701300272
 	
 	With edits by: <Your Name Here>
 		
 	Permission: 
-		You may use the Warners-Barriers-PLPUB-Compat.pbo on your server without receiving permission from the Author.
-		You may redistribute the Warners-Barriers-PLPUB-Compat.pbo as long as you give proper credit to the Author. 
-		You may not remove any code from the Warners-Barriers-PLPUB-Compat.pbo to use in your own mods/mission/projects without permission from the Author.
-		You may repack the Warners-Barriers-PLPUB-Compat.pbo with edits made to the code as long as you do not modify the comment blocks. (Except the "With edits by:" part).
+		You may use the Warners-Barriers-Fortifications.pbo on your server without receiving permission from the Author.
+		You may redistribute the Warners-Barriers-Fortifications.pbo as long as you give proper credit to the Author. 
+		You may not remove any code from the Warners-Barriers-Fortifications.pbo to use in your own mods/mission/projects without permission from the Author.
+		You may repack the Warners-Barriers-Fortifications.pbo with edits made to the code as long as you do not modify the comment blocks. (Except the "With edits by:" part).
 		
 	File Desc: This is where functions and items are defined.
 */
 
 class CfgPatches {
-	class warners_barriers_plpub_compat {
-		name = "Warner's Barriers - 'PLP Urban Packs: Barriers and Fences' Compatibility";
+	class warners_barriers_fortifications {
+		name = "Warner's Barriers - Fortifications Edition";
 		author = "Matthew Warner (Warnerm14)";
 		url = "https://twitter.com/Warnerm14";
 				
@@ -35,11 +32,11 @@ class CfgPatches {
 
 class CfgFunctions
 {
-    class warner_plp
+    class warner_fortifications
     {
         class functions
         {
-            file = "\Warners-Barriers-PLPUB-Compat\scripts";
+            file = "\Warners-Barriers-Fortifications\scripts";
             class init {postInit = 1;};
         };
     };
@@ -58,403 +55,138 @@ class cfgMagazines
 		warner_pos = "[0, 2, 0.8]";
 		warner_dir = 0;
 		warner_allowDamage = 1;
+		warner_texture[] = {};
 		
 		author = "Warnerm14";
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";
-		picture = "\Warners-Barriers-PLPUB-Compat\textures\blank_ico.paa";
+		picture = "\Warners-Barriers-Fortifications\textures\blank_ico.paa";
 	};
 	
-	class warn_metalFenceGrey: warn_baseItem_plp
+	class warn_sandBagWall_Long_Tan: warn_baseItem_plp
 	{
-		mass = 8;
+		mass = 4;
 		scope = 2;
 		
-		displayName = "Pedestrian Fence";
-		warner_class = "plp_upm_metalFenceGrey";	
-		warner_pos = "[0, 2, 0.8]";
+		displayName = "Sandbag Wall (Tan/Long)";
+		warner_class = "Land_BagFence_Long_F";	
+		warner_pos = "[0, 2, 0.4]";
 	};
 	
-	class warn_metalFenceGreyShort: warn_baseItem_plp
+	class warn_sandBagWall_Round_Tan: warn_baseItem_plp
 	{
 		mass = 5;
 		scope = 2;
 		
-		displayName = "Pedestrian Fence (Short)";
-		warner_class = "plp_upm_metalFenceGreyShort";	
-		warner_pos = "[0, 2, 0.8]";
+		displayName = "Sandbag Wall (Tan/Round)";
+		warner_class = "Land_BagFence_Round_F";	
+		warner_pos = "[0, 2, 0.4]";
+		warner_dir = 180;
 	};
 	
-	class warn_metalFenceGreySign: warn_baseItem_plp
+	class warn_sandBagWall_Short_Tan: warn_baseItem_plp
 	{
-		mass = 8;
+		mass = 2;
 		scope = 2;
 		
-		displayName = "Pedestrian Fence (Sign)";
-		warner_class = "plp_upm_metalFenceGreySign";	
-		warner_pos = "[0, 2, 0.8]";
+		displayName = "Sandbag Wall (Tan/Short)";
+		warner_class = "Land_BagFence_Short_F";	
+		warner_pos = "[0, 2, 0.4]";
 	};
 	
-	class warn_metalFenceRusty: warn_baseItem_plp
+	class warn_sandBagWall_Long_Green: warn_baseItem_plp
 	{
-		mass = 8;
+		mass = 4;
 		scope = 2;
 		
-		displayName = "Pedestrian Fence 2";
-		warner_class = "plp_upm_metalFenceRusty";	
-		warner_pos = "[0, 2, 0.8]";
+		displayName = "Sandbag Wall (Green/Long)";
+		warner_class = "Land_BagFence_01_long_green_F";	
+		warner_pos = "[0, 2, 0.4]";
 	};
 	
-	class warn_metalFenceRustyShort: warn_baseItem_plp
+	class warn_sandBagWall_Round_Green: warn_baseItem_plp
 	{
 		mass = 5;
 		scope = 2;
 		
-		displayName = "Pedestrian Fence 2 (Short)";
-		warner_class = "plp_upm_metalFenceRustyShort";	
+		displayName = "Sandbag Wall (Green/Round)";
+		warner_class = "Land_BagFence_01_round_green_F";	
+		warner_pos = "[0, 2, 0.4]";
+		warner_dir = 180;
+	};
+	
+	class warn_sandBagWall_Short_Green: warn_baseItem_plp
+	{
+		mass = 2;
+		scope = 2;
+		
+		displayName = "Sandbag Wall (Green/Short)";
+		warner_class = "Land_BagFence_01_short_green_F";	
+		warner_pos = "[0, 2, 0.4]]";
+	};
+	
+	class warn_czechHedgehog_New: warn_baseItem_plp
+	{
+		mass = 9;
+		scope = 2;
+		
+		displayName = "Czech Hedgehog (New)";
+		warner_class = "Land_CzechHedgehog_01_new_F";	
 		warner_pos = "[0, 2, 0.8]";
 	};
 	
-	class warn_metalFenceRustySign: warn_baseItem_plp
+	class warn_czechHedgehog_Old: warn_baseItem_plp
+	{
+		mass = 9.05;
+		scope = 2;
+		
+		displayName = "Czech Hedgehog (Old)";
+		warner_class = "Land_CzechHedgehog_01_old_F";	
+		warner_pos = "[0, 2, 0.8]";
+	};
+	
+	class warn_junkBarricade: warn_baseItem_plp
 	{
 		mass = 8;
 		scope = 2;
 		
-		displayName = "Pedestrian Fence 2 (Sign)";
-		warner_class = "plp_upm_metalFenceRustySign";	
-		warner_pos = "[0, 2, 0.8]";
+		displayName = "Junk Barricade";
+		warner_class = "Land_Barricade_01_4m_F";	
+		warner_pos = "[0, 4, 0]";
 	};
 	
-	class warn_plasticBarrierOrange: warn_baseItem_plp
+	class warn_sandBagBarricade_Short_Tan: warn_baseItem_plp
 	{
-		mass = 1;
+		mass = 6;
 		scope = 2;
 		
-		displayName = "Plastic Barrier 2 (Orange)";
-		warner_class = "plp_upm_PlasticBarrierOrange";	
-		warner_pos = "[0, 2, 0.5]";
-		warner_dir = 90;
+		displayName = "Sandbag Barricade (Tan/Short)";
+		warner_class = "Land_SandbagBarricade_01_half_F";	
+		warner_pos = "[0, 2, 0.65]";
+		warner_dir = 180;
 	};
 	
-	class warn_plasticBarrierRed: warn_baseItem_plp
+	class warn_sandBagWall_Tall_Tan: warn_baseItem_plp
 	{
-		mass = 1;
+		mass = 10;
 		scope = 2;
 		
-		displayName = "Plastic Barrier 2 (Red)";
-		warner_class = "plp_upm_PlasticBarrierRed";	
-		warner_pos = "[0, 2, 0.5]";
-		warner_dir = 90;
+		displayName = "Sandbag Barricade (Tan/Tall)";
+		warner_class = "Land_SandbagBarricade_01_F";	
+		warner_pos = "[0, 2, 1.3]";
+		warner_dir = 180;
 	};
 	
-	class warn_plasticTubeOrange: warn_baseItem_plp
+	class warn_sandBagWall_Tall_Tan_Hole: warn_baseItem_plp
 	{
-		mass = 1.5;
+		mass = 10;
 		scope = 2;
 		
-		displayName = "Traffic Barrel";
-		warner_class = "plp_upm_PlasticTubeOrange";	
-		warner_pos = "[0, 2, 0.7]";
+		displayName = "Sandbag Wall w/ Hole (Tan/Tall)";
+		warner_class = "Land_SandbagBarricade_01_hole_F";	
+		warner_pos = "[0, 2, 1.3]";
+		warner_dir = 180;
 	};
 	
-	class warn_plasticTubeOrangeLightOn: warn_baseItem_plp
-	{
-		mass = 1.5;
-		scope = 2;
-		
-		displayName = "Traffic Barrel (Lights)";
-		warner_class = "plp_upm_PlasticTubeOrangeLightOn";	
-		warner_pos = "[0, 2, 0.9]";
-	};
-	
-	class warn_trafficConeOrange: warn_baseItem_plp
-	{
-		mass = 0.2;
-		scope = 2;
-		
-		displayName = "Road Cone (Orange)";
-		warner_class = "plp_upm_TrafficConeOrange";	
-		warner_pos = "[0, 2, 0.4]";
-	};
-	
-	class warn_trafficConeRed: warn_baseItem_plp
-	{
-		mass = 0.2;
-		scope = 2;
-		
-		displayName = "Road Cone (Red)";
-		warner_class = "plp_upm_TrafficConeRed";	
-		warner_pos = "[0, 2, 0.4]";
-	};
-	
-	class warn_trafficConeYellow: warn_baseItem_plp
-	{
-		mass = 0.2;
-		scope = 2;
-		
-		displayName = "Road Cone (Yellow)";
-		warner_class = "plp_upm_TrafficConeYellow";	
-		warner_pos = "[0, 2, 0.4]";
-	};
-	
-	class warn_trafficFenceOrange: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Traffic Fence (Orange)";
-		warner_class = "plp_upm_TrafficFenceOrange";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_trafficFenceRed: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Traffic Fence (Red)";
-		warner_class = "plp_upm_TrafficFenceRed";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_trafficFenceWhite: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Traffic Fence (White)";
-		warner_class = "plp_upm_TrafficFenceWhite";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_warningPyramidCaution: warn_baseItem_plp
-	{
-		mass = 1;
-		scope = 2;
-		
-		displayName = "Warning Pyramid (Caution)";
-		warner_class = "plp_upm_WarningPyramidCaution";	
-		warner_pos = "[0, 2, 0.3]";
-	};
-	
-	class warn_warningPyramidRoadworks: warn_baseItem_plp
-	{
-		mass = 1;
-		scope = 2;
-		
-		displayName = "Warning Pyramid (Roadwork)";
-		warner_class = "plp_upm_WarningPyramidRoadworks";	
-		warner_pos = "[0, 2, 0.3]";
-	};
-	
-	class warn_woodBarrierLongPolice: warn_baseItem_plp
-	{
-		mass = 4;
-		scope = 2;
-		
-		displayName = "Road Barrier (Police)";
-		warner_class = "plp_upm_WoodBarrierLongPolice";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_woodBarrierLongRed: warn_baseItem_plp
-	{
-		mass = 4;
-		scope = 2;
-		
-		displayName = "Road Barrier (Striped)";
-		warner_class = "plp_upm_WoodBarrierLongRed";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_woodBarrierLongYellow: warn_baseItem_plp
-	{
-		mass = 4;
-		scope = 2;
-		
-		displayName = "Road Barrier (Yellow)";
-		warner_class = "plp_upm_WoodBarrierLongYellow";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_woodBarrierShortPolice: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Road Barrier (Police/Short)";
-		warner_class = "plp_upm_WoodBarrierShortPolice";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_woodBarrierShortRed: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Road Barrier (Striped/Short)";
-		warner_class = "plp_upm_WoodBarrierShortRed";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_woodBarrierShortYellow: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Road Barrier (Yellow/Short)";
-		warner_class = "plp_upm_WoodBarrierShortYellow";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_woodBarrierShortPoliceLight: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Road Barrier (Police/Short/Lights)";
-		warner_class = "plp_upm_WoodBarrierShortPoliceLightsOn";	
-		warner_pos = "[0, 2, 0.8]";
-	};
-	
-	class warn_woodBarrierShortRedLight: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Road Barrier (Striped/Short/Lights)";
-		warner_class = "plp_upm_WoodBarrierShortRedLightsOn";	
-		warner_pos = "[0, 2, 0.8]";
-	};
-	
-	class warn_woodBarrierShortYellowLight: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Road Barrier (Yellow/Short/Lights)";
-		warner_class = "plp_upm_WoodBarrierShortYellowLightsOn";	
-		warner_pos = "[0, 2, 0.8]";
-	};
-	
-	class warn_metalRoadBarrier: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Metal Road Barrier";
-		warner_class = "plp_upm_RoadBarrierOrange";	
-		warner_pos = "[0, 2, 0.7]";
-	};
-	
-	class warn_metalRoadBarrierLight: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Metal Road Barrier (Lights)";
-		warner_class = "plp_upm_RoadBarrierOrangeLight_on";	
-		warner_pos = "[0, 2, 0.8]";
-	};
-	
-	class warn_parkingBlockCone: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Parking Block Cone";
-		warner_class = "plp_upm_ParkingBlockCone";	
-		warner_pos = "[0, 2, 0.6]";
-	};
-	
-	class warn_modernMobileBarrierRed: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Modern Mobile Barrier (Red)";
-		warner_class = "plp_upm_MobileBarrierSmallRed";	
-		warner_pos = "[0, 2, 0.5]";
-	};
-	
-	class warn_modernMobileBarrierBlack: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Modern Mobile Barrier (Black)";
-		warner_class = "plp_upm_MobileBarrierSmallBlk";	
-		warner_pos = "[0, 2, 0.5]";
-	};
-	
-	class warn_modernMobileBarrierWhite: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Modern Mobile Barrier (White)";
-		warner_class = "plp_upm_MobileBarrierSmallWht";	
-		warner_pos = "[0, 2, 0.5]";
-	};
-	
-	class warn_mobileBarrierShortRed: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Mobile Barrier (Red/Short)";
-		warner_class = "plp_upm_MobileBarrierShortRed";	
-		warner_pos = "[0, 2, 0.5]";
-	};
-	
-	class warn_mobileBarrierShortBlack: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Mobile Barrier (Black/Short)";
-		warner_class = "plp_upm_MobileBarrierShortBlk";	
-		warner_pos = "[0, 2, 0.5]";
-	};
-	
-	class warn_mobileBarrierShortWhite: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Mobile Barrier (White/Short)";
-		warner_class = "plp_upm_MobileBarrierShortWht";	
-		warner_pos = "[0, 2, 0.5]";
-	};
-	
-	class warn_mobileBarrierLongRed: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Mobile Barrier (Red/Long)";
-		warner_class = "plp_upm_MobileBarrierLongRed";	
-		warner_pos = "[0, 2, 0.1]";
-	};
-	
-	class warn_mobileBarrierLongBlack: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Mobile Barrier (Black/Long)";
-		warner_class = "plp_upm_MobileBarrierLongBlk";	
-		warner_pos = "[0, 2, 0.1]";
-	};
-	
-	class warn_mobileBarrierLongWhite: warn_baseItem_plp
-	{
-		mass = 3;
-		scope = 2;
-		
-		displayName = "Mobile Barrier (White/Long)";
-		warner_class = "plp_upm_MobileBarrierLongWht";	
-		warner_pos = "[0, 2, 0.1]";
-	};
 };
 
 
@@ -467,196 +199,67 @@ class CfgVehicles
 		displayName="Warner's Barriers Items";
 		class TransportMagazines
 		{
-			class _xx_warn_metalFenceGrey
+			class _xx_warn_sandBagWall_Long_Tan
 			{
-				magazine="warn_metalFenceGrey";
+				magazine="warn_sandBagWall_Long_Tan";
 				count=50;
 			};
-			class _xx_warn_metalFenceGreyShort
+			class _xx_warn_sandBagWall_Round_Tan
 			{
-				magazine="warn_metalFenceGreyShort";
+				magazine="warn_sandBagWall_Round_Tan";
 				count=50;
 			};
-			class _xx_warn_metalFenceGreySign
+			class _xx_warn_sandBagWall_Short_Tan
 			{
-				magazine="warn_metalFenceGreySign";
+				magazine="warn_sandBagWall_Short_Tan";
 				count=50;
 			};
-			class _xx_warn_metalFenceRusty
+			class _xx_warn_sandBagWall_Long_Green
 			{
-				magazine="warn_metalFenceRusty";
+				magazine="warn_sandBagWall_Long_Green";
 				count=50;
 			};
-			class _xx_warn_metalFenceRustyShort
+			class _xx_warn_sandBagWall_Round_Green
 			{
-				magazine="warn_metalFenceRustyShort";
+				magazine="warn_sandBagWall_Round_Green";
 				count=50;
 			};
-			class _xx_warn_metalFenceRustySign
+			class _xx_warn_sandBagWall_Short_Green
 			{
-				magazine="warn_metalFenceRustySign";
+				magazine="warn_sandBagWall_Short_Green";
 				count=50;
 			};
-			class _xx_warn_plasticBarrierOrange
+			class _xx_warn_czechHedgehog_New
 			{
-				magazine="warn_plasticBarrierOrange";
+				magazine="warn_czechHedgehog_New";
 				count=50;
 			};
-			class _xx_warn_plasticBarrierRed
+			class _xx_warn_czechHedgehog_Old
 			{
-				magazine="warn_plasticBarrierRed";
+				magazine="warn_czechHedgehog_Old";
 				count=50;
 			};
-			class _xx_warn_plasticTubeOrangeLightOn
+			class _xx_warn_junkBarricade
 			{
-				magazine="warn_plasticTubeOrangeLightOn";
+				magazine="warn_junkBarricade";
 				count=50;
 			};
-			class _xx_warn_trafficConeOrange
+			class _xx_warn_sandBagBarricade_Short_Tan
 			{
-				magazine="warn_trafficConeOrange";
+				magazine="warn_sandBagBarricade_Short_Tan";
 				count=50;
 			};
-			class _xx_warn_trafficConeRed
+			class _xx_warn_sandBagWall_Tall_Tan
 			{
-				magazine="warn_trafficConeRed";
+				magazine="warn_sandBagWall_Tall_Tan";
 				count=50;
 			};
-			class _xx_warn_trafficConeYellow
+			class _xx_warn_sandBagWall_Tall_Tan_Hole
 			{
-				magazine="warn_trafficConeYellow";
+				magazine="warn_sandBagWall_Tall_Tan_Hole";
 				count=50;
 			};
-			class _xx_warn_trafficFenceOrange
-			{
-				magazine="warn_trafficFenceOrange";
-				count=50;
-			};
-			class _xx_warn_trafficFenceRed
-			{
-				magazine="warn_trafficFenceRed";
-				count=50;
-			};
-			class _xx_warn_trafficFenceWhite
-			{
-				magazine="warn_trafficFenceWhite";
-				count=50;
-			};
-			class _xx_warn_warningPyramidCaution
-			{
-				magazine="warn_warningPyramidCaution";
-				count=50;
-			};
-			class _xx_warn_warningPyramidRoadworks
-			{
-				magazine="warn_warningPyramidRoadworks";
-				count=50;
-			};
-			class _xx_warn_woodBarrierLongPolice
-			{
-				magazine="warn_woodBarrierLongPolice";
-				count=50;
-			};
-			class _xx_warn_woodBarrierLongRed
-			{
-				magazine="warn_woodBarrierLongRed";
-				count=50;
-			};
-			class _xx_warn_woodBarrierLongYellow
-			{
-				magazine="warn_woodBarrierLongYellow";
-				count=50;
-			};
-			class _xx_warn_woodBarrierShortPolice
-			{
-				magazine="warn_woodBarrierShortPolice";
-				count=50;
-			};
-			class _xx_warn_woodBarrierShortRed
-			{
-				magazine="warn_woodBarrierShortRed";
-				count=50;
-			};
-			class _xx_warn_woodBarrierShortYellow
-			{
-				magazine="warn_woodBarrierShortYellow";
-				count=50;
-			};
-			class _xx_warn_woodBarrierShortPoliceLight
-			{
-				magazine="warn_woodBarrierShortPoliceLight";
-				count=50;
-			};
-			class _xx_warn_woodBarrierShortRedLight
-			{
-				magazine="warn_woodBarrierShortRedLight";
-				count=50;
-			};
-			class _xx_warn_woodBarrierShortYellowLight
-			{
-				magazine="warn_woodBarrierShortYellowLight";
-				count=50;
-			};
-			class _xx_warn_metalRoadBarrier
-			{
-				magazine="warn_metalRoadBarrier";
-				count=50;
-			};
-			class _xx_warn_metalRoadBarrierLight
-			{
-				magazine="warn_metalRoadBarrierLight";
-				count=50;
-			};
-			class _xx_warn_parkingBlockCone
-			{
-				magazine="warn_parkingBlockCone";
-				count=50;
-			};
-			class _xx_warn_modernMobileBarrierRed
-			{
-				magazine="warn_modernMobileBarrierRed";
-				count=50;
-			};
-			class _xx_warn_modernMobileBarrierBlack
-			{
-				magazine="warn_modernMobileBarrierBlack";
-				count=50;
-			};
-			class _xx_warn_modernMobileBarrierWhite
-			{
-				magazine="warn_modernMobileBarrierWhite";
-				count=50;
-			};
-			class _xx_warn_mobileBarrierShortRed
-			{
-				magazine="warn_mobileBarrierShortRed";
-				count=50;
-			};
-			class _xx_warn_mobileBarrierShortBlack
-			{
-				magazine="warn_mobileBarrierShortBlack";
-				count=50;
-			};
-			class _xx_warn_mobileBarrierShortWhite
-			{
-				magazine="warn_mobileBarrierShortWhite";
-				count=50;
-			};
-			class _xx_warn_mobileBarrierLongRed
-			{
-				magazine="warn_mobileBarrierLongRed";
-				count=50;
-			};
-			class _xx_warn_mobileBarrierLongBlack
-			{
-				magazine="warn_mobileBarrierLongBlack";
-				count=50;
-			};
-			class _xx_warn_mobileBarrierLongWhite
-			{
-				magazine="warn_mobileBarrierLongWhite";
-				count=50;
-			};
+			
 		};
 		class TransportWeapons{};
 		class TransportItems{};
