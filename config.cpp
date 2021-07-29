@@ -3,6 +3,7 @@
 	PLP Urban Packs: Barriers and Fences Compatibility 
 	
 	Author: Matthew Warner (Warnerm14)
+	Discord: Warnerm14#3936
 	Site: www.twitter.com/Warnerm14
 	
 	"PLP Urban Packs: Barriers and Fences" 
@@ -58,6 +59,7 @@ class cfgMagazines
 		warner_pos = "[0, 2, 0.8]";
 		warner_dir = 0;
 		warner_allowDamage = 1;
+		warner_texture[] = {};
 		
 		author = "Warnerm14";
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";

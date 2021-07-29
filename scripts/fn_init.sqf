@@ -3,6 +3,7 @@
 	PLP Urban Packs: Barriers and Fences Compatibility 
 	
 	Author: Matthew Warner (Warnerm14)
+	Discord: Warnerm14#3936
 	Site: www.twitter.com/Warnerm14
 	
 	"PLP Urban Packs: Barriers and Fences" 
